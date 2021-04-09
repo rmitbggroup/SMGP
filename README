@@ -1,0 +1,29 @@
+The file `epinion.sh ' contains the sample script for experiments on dataset epinion in the 'Epinion' folder.
+
+Below are some common input parameters. For description for other parameters, please refer to smgp+.py
+
+--motif the input query motif (q1 - q18). 18 motifs are specified from line 251 to line 407 in 'smgp+.py'. 
+
+--triangle the directory of txt file storing edge weights based on triangular motifs (i.e.,q0). used for computing neighborhood factor.
+
+--truth the directory of txt file storing edge weights based on the input motif.
+
+--baseline 1 for Fennel, 2 for MAPPR.
+
+--output the output directory for storing files recording performance of the input method.
+
+--iteration the number of iteration to run.
+
+--sample the number of sample per batch in each iteration.
+
+--stopIteration  the number of iteration involving neighborhood factor.
+
+
+File format: for all input files after '--triangle' and '--truth' parameters follow the same formate below. The first line describes the total count of induced subgraphs isomorphic to the input query. For the rest of the lines, each line consists of three elements: two endpoints of an edge followed by the motif-based weight. The node index starting from 0.
+
+count
+node node weight
+node node weight
+...
+...
+...
